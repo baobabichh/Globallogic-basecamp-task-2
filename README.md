@@ -1,12 +1,13 @@
+### GL C/C++ BaseCamp 2022 Task 2 Heorhii Mamonov
+
+WBS to this task - docs/wbs_Task_2.txt<br>
+Uml diagram to this task - docs/ClassDiagram.png<br>
+
 ### File Indexer Application
-Implement File indexer application. Language/libraries: C/C++, STL, usage of additional libraries
-or 3rd party code is prohibited. For threading should be used platform-dependent API (unless
-specified otherwise by mentor). For UI might be used winAPI, Qt etc. The application should be
-written with using OOP.
+Implement File indexer application. Language/libraries: C/C++, STL, usage of additional libraries or 3rd party code is prohibited. For threading should be used platform-dependent API (unless specified otherwise by mentor). For UI might be used winAPI, Qt etc. The application should be written with using OOP.
 
 ### Application should:
-- Index all files on all local disks – find all files and store their name/date/size/path to local
-storage (XML file).
+- Index all files on all local disks – find all files and store their name/date/size/path to local storage (XML file).
 - Non-blocking UI – it should not freeze while indexing files.
 - UI should show directory it currently index.
 - GUI controls for start/pause/stop indexing, for searching file.
@@ -17,8 +18,7 @@ storage (XML file).
     4. By size
 - If file is not in index, search in file system.
 - Compile for Linux and Windows.
-- Documentation: requirements specification, software design documentation (application
-modules description, UML diagrams).
+- Documentation: requirements specification, software design documentation (application modules description, UML diagrams).
 
 ### How to use
 -   Make with QT, so you need QT creator to open.
