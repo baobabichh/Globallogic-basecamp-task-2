@@ -1,0 +1,114 @@
+\hypertarget{class_i_x_m_l_file_traveler}{}\doxysection{IXMLFile\+Traveler Class Reference}
+\label{class_i_x_m_l_file_traveler}\index{IXMLFileTraveler@{IXMLFileTraveler}}
+
+
+{\ttfamily \#include $<$IXMLFile\+Traveler.\+h$>$}
+
+Inheritance diagram for IXMLFile\+Traveler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_i_x_m_l_file_traveler}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_x_m_l_file_traveler_a23cbc78e49c2fc56daa573cf9bfccb05}{state\+Changed}} (\mbox{\hyperlink{class_state_machine_ab2276864fa5bca6bde76d99c904fa459}{State\+Machine\+::\+State}} state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_x_m_l_file_traveler_a6796e28a65421697c719e1147b2c8396}{IXMLFile\+Traveler}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_i_x_m_l_file_traveler_aeb454027af256f96e60f2edef5105517}{$\sim$\+IXMLFile\+Traveler}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_i_x_m_l_file_traveler_aefadc78da973277a55fd26a5ac286edf}{start\+Searching}} (\mbox{\hyperlink{class_file_action}{File\+Action}} \&action, const QString \&file\+Path)=0
+\item 
+virtual void \mbox{\hyperlink{class_i_x_m_l_file_traveler_aaacbe746051ccd8c75c5f3c0cf2f958a}{resume}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_x_m_l_file_traveler_aeccea6cf52d49cd71f44fb9266ba4240}{pause}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_x_m_l_file_traveler_a705d67ac25ed0506d2908d463a0d39f3}{stop}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_state_machine_ab2276864fa5bca6bde76d99c904fa459}{State\+Machine\+::\+State}} \mbox{\hyperlink{class_i_x_m_l_file_traveler_a11d7375d52d1aee373e3e8c343161128}{get\+State}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_x_m_l_file_traveler_a6796e28a65421697c719e1147b2c8396}\label{class_i_x_m_l_file_traveler_a6796e28a65421697c719e1147b2c8396}} 
+\index{IXMLFileTraveler@{IXMLFileTraveler}!IXMLFileTraveler@{IXMLFileTraveler}}
+\index{IXMLFileTraveler@{IXMLFileTraveler}!IXMLFileTraveler@{IXMLFileTraveler}}
+\doxysubsubsection{\texorpdfstring{IXMLFileTraveler()}{IXMLFileTraveler()}}
+{\footnotesize\ttfamily IXMLFile\+Traveler\+::\+IXMLFile\+Traveler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_i_x_m_l_file_traveler_aeb454027af256f96e60f2edef5105517}\label{class_i_x_m_l_file_traveler_aeb454027af256f96e60f2edef5105517}} 
+\index{IXMLFileTraveler@{IXMLFileTraveler}!````~IXMLFileTraveler@{$\sim$IXMLFileTraveler}}
+\index{````~IXMLFileTraveler@{$\sim$IXMLFileTraveler}!IXMLFileTraveler@{IXMLFileTraveler}}
+\doxysubsubsection{\texorpdfstring{$\sim$IXMLFileTraveler()}{~IXMLFileTraveler()}}
+{\footnotesize\ttfamily virtual IXMLFile\+Traveler\+::$\sim$\+IXMLFile\+Traveler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_x_m_l_file_traveler_a11d7375d52d1aee373e3e8c343161128}\label{class_i_x_m_l_file_traveler_a11d7375d52d1aee373e3e8c343161128}} 
+\index{IXMLFileTraveler@{IXMLFileTraveler}!getState@{getState}}
+\index{getState@{getState}!IXMLFileTraveler@{IXMLFileTraveler}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_state_machine_ab2276864fa5bca6bde76d99c904fa459}{State\+Machine\+::\+State}} IXMLFile\+Traveler\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_x_m_l_file_traveler_q_impl_a74c062de40979996d39096482e292dcc}{XMLFile\+Traveler\+QImpl}}.
+
+\mbox{\Hypertarget{class_i_x_m_l_file_traveler_aeccea6cf52d49cd71f44fb9266ba4240}\label{class_i_x_m_l_file_traveler_aeccea6cf52d49cd71f44fb9266ba4240}} 
+\index{IXMLFileTraveler@{IXMLFileTraveler}!pause@{pause}}
+\index{pause@{pause}!IXMLFileTraveler@{IXMLFileTraveler}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily virtual void IXMLFile\+Traveler\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_x_m_l_file_traveler_q_impl_a39de27b617949cefbd0fbb01670e1284}{XMLFile\+Traveler\+QImpl}}.
+
+\mbox{\Hypertarget{class_i_x_m_l_file_traveler_aaacbe746051ccd8c75c5f3c0cf2f958a}\label{class_i_x_m_l_file_traveler_aaacbe746051ccd8c75c5f3c0cf2f958a}} 
+\index{IXMLFileTraveler@{IXMLFileTraveler}!resume@{resume}}
+\index{resume@{resume}!IXMLFileTraveler@{IXMLFileTraveler}}
+\doxysubsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily virtual void IXMLFile\+Traveler\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_x_m_l_file_traveler_q_impl_a06436074bf044df2670a6c78d39b61f0}{XMLFile\+Traveler\+QImpl}}.
+
+\mbox{\Hypertarget{class_i_x_m_l_file_traveler_aefadc78da973277a55fd26a5ac286edf}\label{class_i_x_m_l_file_traveler_aefadc78da973277a55fd26a5ac286edf}} 
+\index{IXMLFileTraveler@{IXMLFileTraveler}!startSearching@{startSearching}}
+\index{startSearching@{startSearching}!IXMLFileTraveler@{IXMLFileTraveler}}
+\doxysubsubsection{\texorpdfstring{startSearching()}{startSearching()}}
+{\footnotesize\ttfamily virtual void IXMLFile\+Traveler\+::start\+Searching (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_file_action}{File\+Action}} \&}]{action,  }\item[{const QString \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_x_m_l_file_traveler_q_impl_a318579a6473d740392d89d84e8a50216}{XMLFile\+Traveler\+QImpl}}.
+
+\mbox{\Hypertarget{class_i_x_m_l_file_traveler_a23cbc78e49c2fc56daa573cf9bfccb05}\label{class_i_x_m_l_file_traveler_a23cbc78e49c2fc56daa573cf9bfccb05}} 
+\index{IXMLFileTraveler@{IXMLFileTraveler}!stateChanged@{stateChanged}}
+\index{stateChanged@{stateChanged}!IXMLFileTraveler@{IXMLFileTraveler}}
+\doxysubsubsection{\texorpdfstring{stateChanged}{stateChanged}}
+{\footnotesize\ttfamily void IXMLFile\+Traveler\+::state\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state_machine_ab2276864fa5bca6bde76d99c904fa459}{State\+Machine\+::\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_i_x_m_l_file_traveler_a705d67ac25ed0506d2908d463a0d39f3}\label{class_i_x_m_l_file_traveler_a705d67ac25ed0506d2908d463a0d39f3}} 
+\index{IXMLFileTraveler@{IXMLFileTraveler}!stop@{stop}}
+\index{stop@{stop}!IXMLFileTraveler@{IXMLFileTraveler}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void IXMLFile\+Traveler\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_x_m_l_file_traveler_q_impl_a50f1c90a99c31537c219c6f3f24e3324}{XMLFile\+Traveler\+QImpl}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/goshan/\+Desktop/\+GL\+\_\+\+BC\+\_\+\+TASK\+\_\+2/src/\mbox{\hyperlink{_i_x_m_l_file_traveler_8h}{IXMLFile\+Traveler.\+h}}\end{DoxyCompactItemize}

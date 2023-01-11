@@ -1,0 +1,165 @@
+\hypertarget{_file_action_8h_source}{}\doxysection{File\+Action.\+h}
+\label{_file_action_8h_source}\index{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/FileAction.h@{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/FileAction.h}}
+\mbox{\hyperlink{_file_action_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_info_8h}{FileInfo.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <qdebug.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <qobject.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <qdialog.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <qlabel.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <qtextbrowser.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{// Class to provide action for file}}
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_action}{FileAction}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_file_action_ac8798984b9f95a275405a56073f1a070}{\string~FileAction}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{// Action should be overloaded in derived class.}}
+\DoxyCodeLine{18     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_action_ac8d44ee3cb6c047b18362a8ab00c8da7}{operator()}}(\mbox{\hyperlink{struct_file_info}{FileInfo}}\& file);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{comment}{// Calls when needs stop.}}
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_action_a01f2d46bb5c2293d50dc8bef67c251a0}{stop}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Calls when needs pause.}}
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_action_aabdcb05325696d0c2c5802daf9ab4cd4}{pause}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Calls when needs resume.}}
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_action_ac796c2ba0c13a86a0468c0d9dc5967bc}{resume}}();}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_info_displayer}{FileInfoDisplayer}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{comment}{// This action add file to FileInfoDisplayer.}}
+\DoxyCodeLine{34 \textcolor{comment}{// Thread safe adds row to table using signals and slots.}}
+\DoxyCodeLine{35 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_print_action}{FilePrintAction}} :  \textcolor{keyword}{public} QObject, \textcolor{keyword}{public} \mbox{\hyperlink{class_file_action}{FileAction}}}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     Q\_OBJECT}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 signals:}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{// Signal imits when we need to add file.}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_print_action_a479515127d44d7696dda04a3534d812e}{fileShouldAdd}}(\mbox{\hyperlink{struct_file_info}{FileInfo}} fileInfo);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{// Slot to add file to table.}}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} addFile(\textcolor{keyword}{const} \mbox{\hyperlink{struct_file_info}{FileInfo}}\& fileInfo);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{public}:}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{// Inits displayer and connection.}}
+\DoxyCodeLine{52     \mbox{\hyperlink{class_file_print_action}{FilePrintAction}}(\mbox{\hyperlink{class_file_info_displayer}{FileInfoDisplayer}} \&displayer);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{// Disconnects connection.}}
+\DoxyCodeLine{55     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_file_print_action_a16576285afbc96519c96b152821deb2e}{\string~FilePrintAction}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{comment}{// Action on file.}}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_print_action_a1aaaf01d6ea784ac5359b92516f23119}{operator()}}(\mbox{\hyperlink{struct_file_info}{FileInfo}} \&file) \textcolor{keyword}{override};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{private}:}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{comment}{// Reference to table where we add files.}}
+\DoxyCodeLine{64     \mbox{\hyperlink{class_file_info_displayer}{FileInfoDisplayer}}\& m\_displayer;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{comment}{// Connection void fileShouldAdd(FileInfo fileInfo) and void addFile(const FileInfo\& fileInfo).}}
+\DoxyCodeLine{67     QMetaObject::Connection m\_connection;}
+\DoxyCodeLine{68 \};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{keyword}{class }\mbox{\hyperlink{class_x_m_l_file_writer}{XMLFileWriter}};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{// Uses XMLFileWriter to write files.}}
+\DoxyCodeLine{73 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_saver_action}{FileSaverAction}} : \textcolor{keyword}{private} QObject, \textcolor{keyword}{public} \mbox{\hyperlink{class_file_action}{FileAction}}}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     Q\_OBJECT}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{private}: signals:}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{comment}{// Signal imits when we need change status.}}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_saver_action_a6d2007c8c2565e3068380b53fd356e33}{shouldChangeStatus}}(QString status);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{keyword}{public}:}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \textcolor{comment}{// Inits XMLFileWriter.}}
+\DoxyCodeLine{85     \mbox{\hyperlink{class_file_saver_action}{FileSaverAction}}(\mbox{\hyperlink{class_x_m_l_file_writer}{XMLFileWriter}}\& writer, QLabel\& lable);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_file_saver_action_a79012d9a1bf9e1518f50dbbe2131af24}{\string~FileSaverAction}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     \textcolor{comment}{// Action on file.}}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_saver_action_afa23430c2022b928883561b9992de4ff}{operator()}}(\mbox{\hyperlink{struct_file_info}{FileInfo}}\& file) \textcolor{keyword}{override};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{comment}{// Saves file.}}
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_saver_action_a63c5911ec927164a9007dfbe48739bfe}{stop}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{keyword}{private}:}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \textcolor{comment}{// Reference to writer which add files.}}
+\DoxyCodeLine{98     \mbox{\hyperlink{class_x_m_l_file_writer}{XMLFileWriter}}\& m\_writer;}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{comment}{// Connection to change lable.}}
+\DoxyCodeLine{101     QMetaObject::Connection m\_connection;}
+\DoxyCodeLine{102 \};}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{comment}{// This action add file to FileInfoDisplayer.}}
+\DoxyCodeLine{105 \textcolor{comment}{// Thread safe adds row to table using signals and slots.}}
+\DoxyCodeLine{106 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_search_action}{FileSearchAction}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_file_action}{FileAction}}}
+\DoxyCodeLine{107 \{}
+\DoxyCodeLine{108 \textcolor{keyword}{public}:}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110     \textcolor{comment}{// Inits m\_printAction.}}
+\DoxyCodeLine{111     \mbox{\hyperlink{class_file_search_action}{FileSearchAction}}(\mbox{\hyperlink{class_file_info_displayer}{FileInfoDisplayer}}\& displayer);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_file_search_action_a8b78c32d6ac4c442b27a14e8c5d5571d}{\string~FileSearchAction}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     \textcolor{comment}{// Action on file.}}
+\DoxyCodeLine{116     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_a15548ebe5038d70458af89193359b10b}{operator()}}(\mbox{\hyperlink{struct_file_info}{FileInfo}}\& file) \textcolor{keyword}{override};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \textcolor{comment}{// Sets that file should be searched by name.}}
+\DoxyCodeLine{119     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_a48d9cfac333dc8a2666edcf41532cc18}{setSearchByName}}(\textcolor{keywordtype}{bool} val);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{comment}{// Sets name to search. (substring)}}
+\DoxyCodeLine{122     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_afacf202bcb1c1eedc2335361991ea6fa}{setName}}(\textcolor{keyword}{const} QString\& name);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{comment}{// Sets that file should be searched by extension.}}
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_a96165bb9e5ffb5d910b92db1be699ac3}{setSearchByExtension}}(\textcolor{keywordtype}{bool} val);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{comment}{// Sets extension to search.}}
+\DoxyCodeLine{128     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_a106567390b39e2eec656c88e56887d5f}{setExtansion}}(\textcolor{keyword}{const} QString\& exstansion);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     \textcolor{comment}{// Sets that file should be searched by date. (date only)}}
+\DoxyCodeLine{131     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_a44ca72ee4eb42dbb69395efc5f6cdc56}{setSearchByDate}}(\textcolor{keywordtype}{bool} val);}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133     \textcolor{comment}{// Sets date to search.}}
+\DoxyCodeLine{134     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_a537c4eca3590776696fcdd8922575dc0}{setDate}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_date}{Date}}\& date);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \textcolor{comment}{// Sets that file should be searched by size.}}
+\DoxyCodeLine{137     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_abc4545a8758923c8472b683a3fcdf77e}{setSearchBySize}}(\textcolor{keywordtype}{bool} val);}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139     \textcolor{comment}{// Sets size to search.}}
+\DoxyCodeLine{140     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_search_action_ae3546a8c07835419115067497a1f746c}{setSize}}(\textcolor{keywordtype}{size\_t} size);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 \textcolor{keyword}{private}:}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \textcolor{comment}{// Search criteria.}}
+\DoxyCodeLine{145     \textcolor{keywordtype}{bool} m\_searchByName = 0;}
+\DoxyCodeLine{146     \textcolor{keywordtype}{bool} m\_searchByExtension = 0;}
+\DoxyCodeLine{147     \textcolor{keywordtype}{bool} m\_searchByDate = 0;}
+\DoxyCodeLine{148     \textcolor{keywordtype}{bool} m\_searchBySize = 0;}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150     \textcolor{comment}{// Search values.}}
+\DoxyCodeLine{151     QString m\_name;}
+\DoxyCodeLine{152     QString m\_extansion;}
+\DoxyCodeLine{153     \mbox{\hyperlink{struct_date}{Date}} m\_date;}
+\DoxyCodeLine{154     \textcolor{keywordtype}{size\_t} m\_size;}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     \textcolor{comment}{// Action to print.}}
+\DoxyCodeLine{157     \mbox{\hyperlink{class_file_print_action}{FilePrintAction}} m\_printAction;}
+\DoxyCodeLine{158 \};}
+\DoxyCodeLine{159 }
+
+\end{DoxyCode}

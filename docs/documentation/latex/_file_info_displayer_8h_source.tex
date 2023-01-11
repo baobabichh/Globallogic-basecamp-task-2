@@ -1,0 +1,34 @@
+\hypertarget{_file_info_displayer_8h_source}{}\doxysection{File\+Info\+Displayer.\+h}
+\label{_file_info_displayer_8h_source}\index{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/FileInfoDisplayer.h@{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/FileInfoDisplayer.h}}
+\mbox{\hyperlink{_file_info_displayer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QTableWidget>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_info_8h}{FileInfo.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// Displays file info in some table.}}
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_info_displayer}{FileInfoDisplayer}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \textcolor{comment}{// Takes reference to table and manipualte after.}}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_file_info_displayer}{FileInfoDisplayer}}(QTableWidget\& table);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{comment}{// Clears Table.}}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_info_displayer_ad55976e424824d93f80732d84b09494c}{clear}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{// Add one item to table.}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_info_displayer_abf9a1ace01f555bf60d89cd45870ebdd}{addItem}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_file_info}{FileInfo}}\& fileInfo);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{comment}{// Sets column names.}}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} createStructure();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{// Reference to table.}}
+\DoxyCodeLine{26     QTableWidget\& m\_table;}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+
+\end{DoxyCode}

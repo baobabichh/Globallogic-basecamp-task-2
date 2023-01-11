@@ -1,0 +1,99 @@
+\hypertarget{_main_window_8h_source}{}\doxysection{Main\+Window.\+h}
+\label{_main_window_8h_source}\index{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/MainWindow.h@{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/MainWindow.h}}
+\mbox{\hyperlink{_main_window_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAINWINDOW\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAINWINDOW\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_check_box_controller_8h}{CheckBoxController.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_system_traveler_8h}{FileSystemTraveler.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_info_displayer_8h}{FileInfoDisplayer.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <memory.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_x_m_l_file_traveler_q_impl_8h}{XMLFileTravelerQImpl.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_x_m_l_file_writer_8h}{XMLFileWriter.h}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_ui}{Ui}} \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}}; \}}
+\DoxyCodeLine{14 QT\_END\_NAMESPACE}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     Q\_OBJECT}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_main_window}{MainWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Action on start indexing button.}}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} on\_StartIndexing\_clicked();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{comment}{// Action on resume indexing button.}}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} on\_ResumeIndexing\_clicked();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{comment}{// Action on pause indexing button.}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} on\_PauseIndexing\_clicked();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{// Action on stop indexing button.}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} on\_StopIndexing\_clicked();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{comment}{// Action on resume searching button.}}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} on\_ResumeSearch\_clicked();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{// Action on pause searching button.}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} on\_PauseSearch\_clicked();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{comment}{// Action on stop searching button.}}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} on\_StopSearch\_clicked();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{comment}{// Action on start searching button.}}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} on\_StartSearch\_clicked();}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{comment}{// Action on select file path button.}}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} on\_SelectFilePath\_clicked();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keyword}{private}:}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{comment}{// Ui of Main Window.}}
+\DoxyCodeLine{56     Ui::MainWindow* ui;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{comment}{// CheckBoxController to all SearchMenu and IndexMenu checkboxes.}}
+\DoxyCodeLine{59     \mbox{\hyperlink{class_check_box_controller}{CheckBoxController}} m\_checkBoxController;}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{comment}{// Action that prints to table.}}
+\DoxyCodeLine{62     std::unique\_ptr<FileAction> m\_printAction;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{comment}{// Action that stores fileinfo to xml file.}}
+\DoxyCodeLine{65     std::unique\_ptr<FileAction> m\_storeAction;}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{comment}{// Action that searches in XML file.}}
+\DoxyCodeLine{68     std::unique\_ptr<FileSearchAction> m\_searchAction;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{comment}{// Traveler, iterates through all filesystem, and uses some action on every file.}}
+\DoxyCodeLine{71     std::unique\_ptr<IFileSystemTraveler> m\_traveler;}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{comment}{// Display fileinfo to table.}}
+\DoxyCodeLine{74     std::unique\_ptr<FileInfoDisplayer> m\_displayer;}
+\DoxyCodeLine{75     }
+\DoxyCodeLine{76     \textcolor{comment}{// Traveler travels through all fileinfo in XML file.}}
+\DoxyCodeLine{77     std::unique\_ptr<IXMLFileTraveler> m\_XMLTraveler;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{comment}{// Writes fileinfo to XML file.}}
+\DoxyCodeLine{80     std::unique\_ptr<XMLFileWriter> m\_XMLWriter;}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{comment}{// Is path to XML file set.}}
+\DoxyCodeLine{83     \textcolor{keywordtype}{bool} m\_filePathSet = 0;}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{comment}{// Path to XML file.}}
+\DoxyCodeLine{86     QString m\_filePath;}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{keyword}{private}:}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90     \textcolor{comment}{// Inits all check boxes.}}
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} setCheckBoxController();}
+\DoxyCodeLine{92 \};}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MAINWINDOW\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="XMLFileWriter">
+    <Position X="26.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IEAAAAAAAACAAAIAACQAAACAAAAAAAAAAIAAAAACQAI=</HashCode>
+      <FileName>XMLFileWriter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XMLFileTravelerQImpl">
+    <Position X="11.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>SAAAAAAEABgQAAAAAAAAIACIAAAgAAAEAAAIAAAAIAA=</HashCode>
+      <FileName>XMLFileTravelerQImpl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateMachine">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="StateMachine::State" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>StateMachine.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>SAAQAIAAAAABAAAgAAAAIAAAAAAgAAAAAAAAEAgAIAg=</HashCode>
+      <FileName>StateMachine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IFileSystemTraveler">
+    <Position X="22.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>SAAAAAAAAAAAEAAABIAAAAAAAAAgAAAAAAAAAQAAIAA=</HashCode>
+      <FileName>IFileSystemTraveler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IXMLFileTraveler">
+    <Position X="11.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>SAAAAAABAAgAAAAAAAAAIAAAAAAgAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>IXMLFileTraveler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileSystemTravelerQImpl">
+    <Position X="22.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>SAAAAIAEABgQAAAAAAAAACAAAAAqAgAAAAgAAQAAIAA=</HashCode>
+      <FileName>FileSystemTraveler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileInfoDisplayer">
+    <Position X="29.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAABAAAAAAAAAEACEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileInfoDisplayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileAction">
+    <Position X="18" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAgAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>FileAction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilePrintAction">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAUAAAEAAAAAAAAAAIAEAAAAAAIAAAAAA=</HashCode>
+      <FileName>FileAction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileSaverAction">
+    <Position X="18" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAAAAEAAAAAAAAAQgAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>FileAction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileSearchAction">
+    <Position X="20.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>cEAAAAAAIAAIAAgAEIAAAAFIAABAAAVAAAEAAAIAAAA=</HashCode>
+      <FileName>FileAction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Errorable">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAMAIIAAAAAAAAAIAAgAAAAACAAAAAAIA=</HashCode>
+      <FileName>Errorable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CheckBoxController">
+    <Position X="26.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAEEAAAAAAAAAAAAAEAAAAAAAACAAA=</HashCode>
+      <FileName>CheckBoxController.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="TravelerDirectory">
+    <Position X="29" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>FileSystemTraveler.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="FileInfo">
+    <Position X="25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIACAAAAAAAEAAAAAAAAAQAIAAA=</HashCode>
+      <FileName>FileInfo.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Date">
+    <Position X="29.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAkAAAAAAAAAAAIAgAAAQAAAAQAAAAAAAAiACAAAAA=</HashCode>
+      <FileName>Date.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="IXMLFileTravelerError">
+    <Position X="26.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAoAAAAAA=</HashCode>
+      <FileName>IXMLFileTraveler.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

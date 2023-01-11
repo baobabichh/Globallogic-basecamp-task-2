@@ -1,0 +1,27 @@
+1) File indexing and storing to xml file (4 days)
+	- Implement thread-safe file indexing.
+	- Implement file indexing with multiple threads.
+	- Implement storing file indices to xml file (name/date/size/path of file).
+	- Test this module.
+2) Finding file in index (4 days)
+	- Implement finding file in index:
+		1. By name
+ 		2. By extension
+ 		3. By date
+ 		4. By size
+	- Implement finding file in system if file is not in index.
+	- Test this module.
+3) Making UI (4 days)
+	- Create separate module.
+	- Implement GUI form in QT.
+	- Make GUI non-blocking.
+	- Implement start/pause/stop indexing.
+	- Implement UI for showing all files in index.
+	- Implement UI for searching file.
+	- Implement UI for showing current state of program.
+	- Test this module.
+4) Making documentation (2 days)
+	- Make requirements specification, software design documentation.
+	- Make user-friendly guide for program.
+
+ 

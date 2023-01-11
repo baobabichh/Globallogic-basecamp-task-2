@@ -1,0 +1,52 @@
+\hypertarget{_i_x_m_l_file_traveler_8h_source}{}\doxysection{IXMLFile\+Traveler.\+h}
+\label{_i_x_m_l_file_traveler_8h_source}\index{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/IXMLFileTraveler.h@{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/IXMLFileTraveler.h}}
+\mbox{\hyperlink{_i_x_m_l_file_traveler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i_file_system_traveler_8h}{IFileSystemTraveler.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_errorable_8h}{Errorable.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{enum class} \mbox{\hyperlink{_i_x_m_l_file_traveler_8h_a29d789e535f74089414ded00df8b733b}{IXMLFileTravelerError}} : \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8     \textcolor{comment}{// Can not open file.}}
+\DoxyCodeLine{9     \mbox{\hyperlink{_i_x_m_l_file_traveler_8h_a29d789e535f74089414ded00df8b733ba2d2e4f8ddafca6d4416918714f1c5ad5}{FailedToOpenFile}},}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \textcolor{comment}{// File dont have root node.}}
+\DoxyCodeLine{12     \mbox{\hyperlink{_i_x_m_l_file_traveler_8h_a29d789e535f74089414ded00df8b733bab9f45a667f78208403469bfb69025bc3}{NoRootNode}},}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{comment}{// Else file structure error.}}
+\DoxyCodeLine{15     \mbox{\hyperlink{_i_x_m_l_file_traveler_8h_a29d789e535f74089414ded00df8b733ba1b42471f8bc9832adc77dc8d09221fed}{BadFileStructure}},}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{// Interface for class, that should iterate all file recordings in XML file and provide some action on each record.}}
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_x_m_l_file_traveler}{IXMLFileTraveler}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_errorable}{Errorable}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 signals:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_x_m_l_file_traveler_a23cbc78e49c2fc56daa573cf9bfccb05}{stateChanged}}(\mbox{\hyperlink{class_state_machine_ab2276864fa5bca6bde76d99c904fa459}{StateMachine::State}} state);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_i_x_m_l_file_traveler_a6796e28a65421697c719e1147b2c8396}{IXMLFileTraveler}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_i_x_m_l_file_traveler_aeb454027af256f96e60f2edef5105517}{\string~IXMLFileTraveler}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Starts searching, should be run in non blocking mode.}}
+\DoxyCodeLine{34     \textcolor{comment}{// If starts while Working or Paused state, stops previus travel and starts new.}}
+\DoxyCodeLine{35     \textcolor{comment}{// filePath is path to file with should be parsed.}}
+\DoxyCodeLine{36     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_x_m_l_file_traveler_aefadc78da973277a55fd26a5ac286edf}{startSearching}}(\mbox{\hyperlink{class_file_action}{FileAction}}\& action, \textcolor{keyword}{const} QString\& filePath) = 0;}
+\DoxyCodeLine{37     }
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_x_m_l_file_traveler_aaacbe746051ccd8c75c5f3c0cf2f958a}{resume}}() = 0;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_x_m_l_file_traveler_aeccea6cf52d49cd71f44fb9266ba4240}{pause}}() = 0;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_x_m_l_file_traveler_a705d67ac25ed0506d2908d463a0d39f3}{stop}}() = 0;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_state_machine_ab2276864fa5bca6bde76d99c904fa459}{StateMachine::State}} \mbox{\hyperlink{class_i_x_m_l_file_traveler_a11d7375d52d1aee373e3e8c343161128}{getState}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{45     }
+\DoxyCodeLine{46 \};}
+
+\end{DoxyCode}

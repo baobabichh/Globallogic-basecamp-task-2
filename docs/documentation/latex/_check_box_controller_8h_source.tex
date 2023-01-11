@@ -1,0 +1,43 @@
+\hypertarget{_check_box_controller_8h_source}{}\doxysection{Check\+Box\+Controller.\+h}
+\label{_check_box_controller_8h_source}\index{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/CheckBoxController.h@{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/CheckBoxController.h}}
+\mbox{\hyperlink{_check_box_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CHECKBOXCONTROLLER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CHECKBOXCONTROLLER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QLineEdit>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QCheckBox>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{// Sets QWidget enabled or not depending on QCheckBox.}}
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_check_box_controller}{CheckBoxController}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{class_check_box_controller_aa61bd104b73de24deb115e9698b63061}{CheckBoxController}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \mbox{\hyperlink{class_check_box_controller_a6263de14610ba0cda6b7f7da33a9a2f8}{CheckBoxController}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_check_box_controller}{CheckBoxController}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \mbox{\hyperlink{class_check_box_controller_a10d1a2e8e5c1fa916f932fc5e79355dc}{CheckBoxController}}(\mbox{\hyperlink{class_check_box_controller}{CheckBoxController}}\&\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_check_box_controller_a5dc01049226092a2bfb8669f09c946ee}{\string~CheckBoxController}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Add connection of QWidget and QCheckBox}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_check_box_controller_ac126acd4d6c6e1e1d0d1d483219c00ce}{add}}(QWidget\& widget , QCheckBox\& checkBox);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{// Remove connection of QWidget and QCheckBox}}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_check_box_controller_a6a9f7d0d552f9c79c0e7228ea7ef6276}{remove}}(QWidget\& widget,QCheckBox\& checkBox);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{comment}{// QWidget* and QCheckBox* is a key, QMetaObject::Connection is a value.}}
+\DoxyCodeLine{32     \textcolor{comment}{// QMetaObject::Connection is connection between QWidget* and QCheckBox*.}}
+\DoxyCodeLine{33     std::map<std::pair<QWidget*,QCheckBox*>,QMetaObject::Connection> m\_connections;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CHECKBOXCONTROLLER\_H}}
+
+\end{DoxyCode}

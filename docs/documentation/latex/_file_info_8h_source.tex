@@ -1,0 +1,25 @@
+\hypertarget{_file_info_8h_source}{}\doxysection{File\+Info.\+h}
+\label{_file_info_8h_source}\index{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/FileInfo.h@{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/FileInfo.h}}
+\mbox{\hyperlink{_file_info_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QString>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_date_8h}{Date.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QFileInfo>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{// Contains name of file, path to file, size of file, date last modifyed}}
+\DoxyCodeLine{8 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_file_info}{FileInfo}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{comment}{// Data of file.}}
+\DoxyCodeLine{11     QString \mbox{\hyperlink{struct_file_info_aabeeb8dd2c57f11fb6e95be88be94a6c}{name}};}
+\DoxyCodeLine{12     QString \mbox{\hyperlink{struct_file_info_ad598f0138d70024dc10c50d55dc79e2b}{path}};}
+\DoxyCodeLine{13     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{struct_file_info_a97b33d264e6d54934d54d924bd735a2d}{size}};}
+\DoxyCodeLine{14     \mbox{\hyperlink{struct_date}{Date}} \mbox{\hyperlink{struct_file_info_a8cc3b90679f1e5f52977c202873de515}{date}};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \textcolor{comment}{// Converts from QFileInfo data to this object.}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_file_info_adbaa53428664286af7a1ec83779b6162}{fromQFileInfo}}(\textcolor{keyword}{const} QFileInfo\& info);}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+
+\end{DoxyCode}

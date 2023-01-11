@@ -1,0 +1,33 @@
+\hypertarget{_date_8h_source}{}\doxysection{Date.\+h}
+\label{_date_8h_source}\index{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/Date.h@{C:/Users/goshan/Desktop/GL\_BC\_TASK\_2/src/Date.h}}
+\mbox{\hyperlink{_date_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DATE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DATE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QDateTime>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// Light weight Date structure, includes time.}}
+\DoxyCodeLine{7 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_date}{Date}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \mbox{\hyperlink{struct_date_a8433722fd18fcddf9d0a369b4b81daf8}{year}} = 0;}
+\DoxyCodeLine{10     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_date_a8daf144802011e81677eec79282497fe}{month}} = 0, \mbox{\hyperlink{struct_date_a7ef36e3f385d1e56486038c8b2697cf0}{day}} = 0;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_date_aa1f4c24cd2fb8ab78b167c4ddb58d0f6}{hour}} = 0, \mbox{\hyperlink{struct_date_a376f25754243478bde2293674e046103}{minute}} = 0, \mbox{\hyperlink{struct_date_a928e2295289e08682f7b07090def5d0e}{second}} = 0;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_date_a180ac38c768d0b44fee99ed7ccf9f870}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_date}{Date}}\& val);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_date_a46c0a9039077448b3e9fb056cfa2e538}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_date}{Date}}\& val);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{comment}{// Converts from QString to this object format "{}day.month.year hour:minute:second"{}.}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_date_a49edafed0db2ff87b2717ac3ba5118b6}{fromQString}}(\textcolor{keyword}{const} QString\& str);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{comment}{// Converts from QDateTime data to this object.}}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{struct_date_a2bc48f688e6482138cf04e81b01a73bb}{fromQDateTime}}(\textcolor{keyword}{const} QDateTime\& date);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Represent date in string, format "{}day.month.year hour:minute:second"{}}}
+\DoxyCodeLine{24     QString \mbox{\hyperlink{struct_date_aa6b42bd6557a3f3bf509db3406c133a4}{toQString}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DATE\_H}}
+
+\end{DoxyCode}
